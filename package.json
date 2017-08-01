@@ -1,0 +1,38 @@
+{
+  "name": "wait-as-promised",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": [
+    "Hyan Mandian <hyanmandian@hotmail.com>",
+    "Alex Rocha <alex.rochas@yahoo.com>"
+  ],
+  "description": "Syntax sugar setInterval as a promised",
+  "repository": "hyanmandian/wait-as-promised",
+  "license": "MIT",
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "wait",
+    "until",
+    "promise",
+    "promised",
+    "node",
+    "nodejs",
+    "semaphore",
+    "lock",
+    "locks",
+    "predicate"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  }
+}
