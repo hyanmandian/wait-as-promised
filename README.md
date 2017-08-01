@@ -1,5 +1,7 @@
 > Easy way to wait for changes
 
+[![Build Status](https://travis-ci.org/sindresorhus/escape-goat.svg?branch=master)](https://travis-ci.org/sindresorhus/escape-goat)
+
 ## Install
 
 ```
