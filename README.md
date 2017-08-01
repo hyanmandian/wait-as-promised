@@ -1,6 +1,6 @@
 > Easy way to wait for changes
 
-[![Build Status](https://travis-ci.org/sindresorhus/escape-goat.svg?branch=master)](https://travis-ci.org/sindresorhus/escape-goat)
+[![Build Status](https://travis-ci.org/hyanmandian/wait-as-promised.svg?branch=master)](https://travis-ci.org/hyanmandian/wait-as-promised)
 
 ## Install
 
