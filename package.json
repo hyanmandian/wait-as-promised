@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": [
     "Hyan Mandian <hyanmandian@hotmail.com>",
-    "Alex Rocha <alex.rochas@yahoo.com>"
+    "Alex Rocha <alex.rochas@yahoo.com.br>"
   ],
   "description": "Syntax sugar setInterval as a promised",
   "repository": "hyanmandian/wait-as-promised",
