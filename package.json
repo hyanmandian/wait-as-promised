@@ -1,12 +1,12 @@
 {
   "name": "wait-as-promised",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "author": [
     "Hyan Mandian <hyanmandian@hotmail.com>",
     "Alex Rocha <alex.rochas@yahoo.com.br>"
   ],
-  "description": "Syntax sugar setInterval as a promised",
+  "description": "Easy way to wait for changes",
   "repository": "hyanmandian/wait-as-promised",
   "license": "MIT",
   "scripts": {
