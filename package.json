@@ -10,7 +10,7 @@
   "repository": "hyanmandian/wait-as-promised",
   "license": "MIT",
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo --space && ava"
   },
   "engines": {
     "node": ">=6"
@@ -30,7 +30,6 @@
     "locks",
     "predicate"
   ],
-  "license": "MIT",
   "devDependencies": {
     "ava": "*",
     "xo": "*"
