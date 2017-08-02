@@ -25,6 +25,22 @@ setTimeout(() => {
 wait(predicate).then(() => console.log('value equals true'));
 ```
 
+#### Delayed
+
+```js
+const wait = require('wait-as-promised');
+
+let value = false;
+
+const predicate = () => value === true;
+
+setTimeout(() => {
+  value = true;
+}, 2000);
+
+wait(predicate, { delay: 1000 }).then(() => console.log('value equals true'));
+```
+
 #### Timeout
 
 ```js
@@ -39,7 +55,7 @@ setTimeout(() => {
 }, 2000);
 
 // will throw an exception with message 'function timed out after 1000 milliseconds'
-wait(predicate, {timeout: 1000}).then(() => console.log('value equals true'));
+wait(predicate, { timeout: 1000 }).then(() => console.log('value equals true'));
 ```
 
 #### Disable Timeout
@@ -55,5 +71,5 @@ setTimeout(() => {
   value = true;
 }, 2000);
 
-wait(predicate, {timeout: -1}).then(() => console.log('value equals true'));
+wait(predicate, { timeout: -1 }).then(() => console.log('value equals true'));
 ```
