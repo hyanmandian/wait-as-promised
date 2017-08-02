@@ -1,34 +1,25 @@
 'use strict';
 
-const defaultOptions = {
-  timeout: 5000,
-  delay: 0,
-};
+module.exports = (predicate, {timeout} = {timeout: 5000}) => new Promise(resolve => {
+  const racingPromises = [];
 
-const racingPromises = [];
-
-let loop;
-
-module.exports = (predicate, { timeout, delay } = defaultOptions) => new Promise(resolve => {
   const intervalPromise = new Promise(resolve => {
-    loop = setInterval(() => {
+    const loop = setInterval(() => {
       if (predicate()) {
         clearInterval(loop);
         resolve('done');
       }
-    }, delay);
+    });
   });
-
   racingPromises.push(intervalPromise);
 
   if (timeout >= 0) {
     const timeoutPromise = new Promise((resolve, reject) => {
       setTimeout(() => {
-        clearInterval(loop);
-        reject(new Error(`function timed out after ${timeout} milliseconds`));
+        const timeoutMessage = `function timed out after ${timeout} milliseconds`;
+        reject(new Error(timeoutMessage));
       }, timeout);
     });
-
     racingPromises.push(timeoutPromise);
   }
 
