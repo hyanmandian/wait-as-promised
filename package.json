@@ -1,22 +1,25 @@
 {
   "name": "wait-as-promised",
-  "version": "1.0.2",
-  "main": "index.js",
+  "version": "1.0.3",
+  "description": "Easy way to wait for changes",
+  "main": "dist/wait-as-promised.js",
+  "umd:main": "dist/wait-as-promised.umd.js",
+  "module": "dist/wait-as-promised.m.js",
+  "source": "wait-as-promised.js",
   "author": [
     "Hyan Mandian <hyanmandian@hotmail.com>",
     "Alex Rocha <alex.rochas@yahoo.com.br>"
   ],
-  "description": "Easy way to wait for changes",
   "repository": "hyanmandian/wait-as-promised",
   "license": "MIT",
   "scripts": {
-    "test": "xo --space && ava"
-  },
-  "engines": {
-    "node": ">=6"
+    "dev": "microbundle watch",
+    "test": "xo --space && ava",
+    "build": "microbundle"
   },
   "files": [
-    "index.js"
+    "wait-as-promised.js",
+    "dist"
   ],
   "keywords": [
     "wait",
@@ -32,6 +35,7 @@
   ],
   "devDependencies": {
     "ava": "*",
+    "microbundle": "^0.4.4",
     "xo": "*"
   }
 }

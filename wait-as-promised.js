@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = (predicate, {timeout} = {timeout: 5000}) => new Promise(resolve => {
+export default (predicate, {timeout} = {timeout: 5000}) => new Promise(resolve => {
   const racingPromises = [];
 
   const intervalPromise = new Promise(resolve => {
@@ -11,6 +9,7 @@ module.exports = (predicate, {timeout} = {timeout: 5000}) => new Promise(resolve
       }
     });
   });
+
   racingPromises.push(intervalPromise);
 
   if (timeout >= 0) {
@@ -20,6 +19,7 @@ module.exports = (predicate, {timeout} = {timeout: 5000}) => new Promise(resolve
         reject(new Error(timeoutMessage));
       }, timeout);
     });
+
     racingPromises.push(timeoutPromise);
   }
 
