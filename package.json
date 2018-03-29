@@ -14,7 +14,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "microbundle watch",
-    "test": "xo --space && ava",
+    "test": "xo && ava",
     "build": "microbundle"
   },
   "files": [
