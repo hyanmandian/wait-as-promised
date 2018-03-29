@@ -25,6 +25,22 @@ setTimeout(() => {
 wait(predicate).then(() => console.log('value equals true'));
 ```
 
+#### Await
+
+```js
+const wait = require('wait-as-promised');
+
+let value = false;
+
+setTimeout(() => {
+  value = true;
+}, 2000);
+
+await wait(() => value === true);
+
+console.log('value equals true');
+```
+
 #### Timeout
 
 ```js
